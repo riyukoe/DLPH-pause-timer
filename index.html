@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Two independent stopwatches with automatic local saving.">
+  <title>Two Stopwatches</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Two stopwatches</h1>
+    <p class="intro">Keep track of two things at once. Each timer works independently.</p>
+    <div class="timers">
+      <section class="timer" aria-label="Stopwatch 1" data-index="0">
+        <label for="name-0">Timer name</label>
+        <input id="name-0" value="Stopwatch 1" maxlength="60" autocomplete="off">
+        <p class="status" role="status">Ready</p>
+        <output class="time" aria-label="Elapsed time" role="timer" aria-live="off">00:00:00.00</output>
+        <p class="format">Hours : minutes : seconds . hundredths</p>
+        <div class="controls"><button class="primary toggle" type="button">Start</button><button class="reset" type="button" disabled>Reset</button></div>
+      </section>
+      <section class="timer" aria-label="Stopwatch 2" data-index="1">
+        <label for="name-1">Timer name</label>
+        <input id="name-1" value="Stopwatch 2" maxlength="60" autocomplete="off">
+        <p class="status" role="status">Ready</p>
+        <output class="time" aria-label="Elapsed time" role="timer" aria-live="off">00:00:00.00</output>
+        <p class="format">Hours : minutes : seconds . hundredths</p>
+        <div class="controls"><button class="primary toggle" type="button">Start</button><button class="reset" type="button" disabled>Reset</button></div>
+      </section>
+    </div>
+    <p class="note">Timers keep counting in the background. Progress is saved in this browser, including when you refresh or close the page. Reset stops and clears only that timer.</p>
+    <p class="note" id="storage-warning" role="status" hidden>Browser storage is unavailable. Timers work, but progress won’t be saved when you leave this page.</p>
+  </main>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
